@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: kenzy-accessories-backend
+    env: node
+    plan: free
+    buildCommand: npm run build
+    startCommand: node dist/index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 8000
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: ALLOWED_ORIGINS
+        value: https://kenzy-accessories.vercel.app,https://kenzy-accessories-demo.netlify.app
+      - key: CLOUDINARY_CLOUD_NAME
+        sync: false
+      - key: CLOUDINARY_API_KEY
+        sync: false
+      - key: CLOUDINARY_API_SECRET
+        sync: false

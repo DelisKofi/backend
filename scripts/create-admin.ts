@@ -2,8 +2,8 @@ import mongoose from 'mongoose';
 import bcrypt from 'bcrypt';
 import dotenv from 'dotenv';
 
-import { Role } from '../src/modules/roles/role.model.ts';
-import { User } from '../src/modules/users/user.model.ts';
+import { Role } from '../src/modules/roles/role.model.js';
+import { User } from '../src/modules/users/user.model.js';
 
 dotenv.config();
 
